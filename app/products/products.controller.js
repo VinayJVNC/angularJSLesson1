@@ -146,10 +146,12 @@ console.log(response);
 			});
 	}
 	$scope.deleteProduct = function(){
+		console.log("deleteProduct");
 		productsFactory.deleteProductFactory($scope.id).then(function successCallback(response){
-			$scope.showToast(response.data.message);
-			$scope.readProducts();
-		},function errorCallback(){
+			console.log("deleteProduct Controller" + response);
+			/*$scope.showToast(response.data.message);
+			$scope.readProducts();*/
+		},function errorCallback(response){
 			$scope.showToast("Unable to Delete Product");
 		});
 	}

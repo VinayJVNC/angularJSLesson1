@@ -52,7 +52,7 @@ app.factory("productsFactory",function($http){
 		return $http({
 			method : 'POST',
 			data : {
-				'id':id,
+				'id': id,
 			},
 			url : 'http://localhost/codeofaninja_api/product/deleteRecord.php'
 		});
